@@ -1,4 +1,5 @@
 class Sale {
+  name;
   calcPrice() {
     return (
       "Name :" +
@@ -17,16 +18,15 @@ class Sale {
 }
 
 class Beverage extends Sale {
-  
-  name = "Pepsi";
-  amount = 3;
-  price = 19;
-  discount = 10;
+  amount;
+  price;
+  discount;
+
+  beverage = { name: "Pepsi", amount: 3, price: 19, discount: 10 };
   getF() {
     console.log("getF");
   }
 
-  Sale(name, amount, price, discount) {}
   constructor() {
     super();
   }
@@ -37,5 +37,6 @@ class Beverage extends Sale {
   //   }
 }
 
-const Beverage = new Beverage();
-console.log(Beverage.calcPrice());
+const Bever = new Beverage();
+Bever.Sale();
+console.log(Bever.calcPrice());
